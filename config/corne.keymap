@@ -20,6 +20,15 @@
         };
     };
 
+    macros {
+        tumx: tumx {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B)>;
+            label = "TUMX";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -33,7 +42,7 @@
             bindings = <
 &kp ESCAPE  &kp Q  &kp W            &kp E                &kp R              &kp T        &kp Y    &kp U              &kp I                &kp O            &kp P     &kp BSPC
 &kp TAB     &kp A  &bhm LEFT_ALT S  &bhm LEFT_CONTROL D  &bhm LEFT_SHIFT F  &kp G        &kp H    &bhm LEFT_SHIFT J  &bhm LEFT_CONTROL K  &bhm LEFT_ALT L  &kp SEMI  &kp SQT
-&trans      &kp Z  &kp X            &kp C                &kp V              &kp B        &kp N    &kp M              &kp COMMA            &kp DOT          &kp FSLH  &trans
+&tumx       &kp Z  &kp X            &kp C                &kp V              &kp B        &kp N    &kp M              &kp COMMA            &kp DOT          &kp FSLH  &trans
                                     &kp LGUI             &mo 1              &kp SPACE    &kp RET  &mo 2              &kp PRINTSCREEN
             >;
         };
@@ -61,9 +70,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL  &kp AT    &kp HASH          &kp DLLR        &kp PRCNT    &kp CARET  &kp AMPS         &kp GRAVE          &trans                 &kp ASTRK  &kp BSPC
+&kp TAB    &kp EXCL  &kp AT    &kp HASH          &kp DLLR        &kp PRCNT    &kp CARET  &kp AMPS         &kp GRAVE          &kp TILDE              &kp ASTRK  &kp BSPC
 &kp LCTRL  &trans    &kp LPAR  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp EQUAL    &kp UNDER  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp BSLH   &trans
-&kp LSHFT  &trans    &trans    &trans            &trans          &trans       &kp MINUS  &kp PLUS         &trans             &trans                 &kp PIPE   &kp TILDE
+&kp LSHFT  &trans    &trans    &trans            &trans          &trans       &kp MINUS  &kp PLUS         &trans             &trans                 &kp PIPE   &trans
                                &kp LGUI          &trans          &kp SPACE    &kp RET    &trans           &trans
             >;
         };
